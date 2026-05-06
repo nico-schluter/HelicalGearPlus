@@ -1,3 +1,15 @@
-.idea/
+# Local environment (machine-specific paths, no secrets but not portable)
+.env
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
 .DS_Store
-.vscode
+
+# Editor
+.vscode/
+*.swp
+*.swo

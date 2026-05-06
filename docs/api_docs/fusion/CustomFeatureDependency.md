@@ -1,0 +1,37 @@
+# CustomFeatureDependency
+Namespace: adsk.fusion
+Inherits: Base
+Since: January 2021
+
+A custom feature dependency defines a dependency the custom feature has on an entity outside the custom feature. For example, a feature might be dependent on a face or a point and if those entities are modified the custom feature needs to recompute to be up to date.
+
+**Accessed from:** CustomFeatureDependencies.add, CustomFeatureDependencies.item, CustomFeatureDependencies.itemById
+
+## Methods
+
+### [static] classType() -> string
+Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().
+- **Returns** (string): Returns a string indicating the type of the object.
+
+### deleteMe() -> boolean
+Deletes this dependency from the custom feature.
+- **Returns** (boolean): Returns true if the delete was successful.
+
+## Properties
+
+### entity : Base [read-write]
+Gets and sets the entity associated with this dependency.
+
+### id : string [read-only]
+Returns the ID of this custom feature dependency.
+
+### isValid : boolean [read-only]
+Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.
+
+### objectType : string [read-only]
+This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.
+
+It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():
+
+### parentCustomFeature : CustomFeature [read-only]
+Returns the custom feature this dependency is associated with.

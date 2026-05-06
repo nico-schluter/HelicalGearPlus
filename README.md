@@ -1,47 +1,30 @@
-# HelicalGear Plus
+# HelicalGearPlus
 
-Add-In for Autodesk Fusion360.    
-Generates straight, helical and herringbone external, internal and rack gears
+Add-In for Autodesk Fusion 360.
+Generates straight, helical, and herringbone external, internal, and rack gears,
 as well as non-enveloping worms and worm gears.
-Parts based on Ross Korsky's Helical gear generator.    
 
-🎉 **1K+ Users in the first Month on the App Store!** 🎉
+Originally created by Nico Schlüter, with parts based on Ross Korsky's helical
+gear generator. The legacy single-file add-in is preserved under
+[docs/HelicalGearPlus/](docs/HelicalGearPlus/) for reference while the
+production code is restructured around the phos.systems framework template.
 
-<br>
+# Status
 
-![gears](https://user-images.githubusercontent.com/30301307/74059553-8c1a5e00-49e8-11ea-91ba-b8ec525d1222.jpg)
-
-<br>
-
-![UI2](https://user-images.githubusercontent.com/30301307/78392013-cb7bba00-75e7-11ea-8c0d-de8ae442ef6e.jpg)
-
-<br>
+**Scaffolding in place; functional port pending.** The repository structure has
+been set up around the phos.systems Fusion add-in template (`futil`, per-command
+modules) but the actual gear-generation logic has not yet been ported from the
+legacy file. The add-in does not currently produce any commands when loaded.
 
 # Installation
-[Get it from the App Store!](https://apps.autodesk.com/FUSION/en/Detail/Index?id=1259509007239787473&appLang=en&os=Mac)
 
-**OR**
+When the port is complete, install per the standard process:
 
-* Download the Project as ZIP and extract it somewhere you can find again, but won't bother you. (or use git to clone it there)
-* Open Fusion360 and press ADD-INS > Scripts and Add-ins
-* Select the tab Add-Ins and click the green plus symbol next to "My Add-Ins"
-* Navigate to the extracted Project forlder and hit open
-* The Add-in should now appear in the "My Add-Ins" list. Select it in the list. If desired check the "Run ond Startup" checkbox and hit run.
-* The Command will appear as CREATE > Helical Gear
+- Download the project as a ZIP and extract it somewhere convenient, or clone it with git
+- Open Fusion 360 and press **Shift+S** to open Scripts & Add-Ins
+- Select the **Add-Ins** tab and click the green **+** next to "My Add-Ins"
+- Navigate to the `src/HelicalGearPlus/` folder inside the extracted project and hit Open
+- The add-in will appear in the "My Add-Ins" list — select it, optionally check "Run on Startup", and click Run
 
-# Changelog
-
-## 1.0.6 Positioning Update
-- Added positioning options 
-
-## 1.0.5 Gear Type Update
-- Interface redesign
-- Rack Gear support
-- Internal Gear support
-- Published on the App store
-- Code readabillity improvements
-
-## 1.0.4 Performance Update
-- Major Performance improvements
-- Far less timeline objects
-- Published on Github
+In the meantime, the v1.0.6 release on the Autodesk App Store remains the live
+version.
